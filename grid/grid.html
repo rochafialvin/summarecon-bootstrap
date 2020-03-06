@@ -13,6 +13,35 @@
         - Ketika total lebar dari Grid Item melebihi 12, maka akan ada Grid Item yang pindah ke baris selanjutnya
      -->
 
+     <!-- 
+         <div class="col-sm-6">
+             small : 576px
+            Untuk lebar layar 576px - seterusnya akan mengambil 6 bagian
+         </div>
+
+         <div class="col-sm-6 col-md-3">
+            small : 576px
+            medium : 768px
+            
+            Untuk lebar layar 576px - 767px akan mengambil 6 bagian
+            Untuk lebar layar 768px - seterusnya akan mengambil 3 bagian
+         </div>
+
+         <div class="col-sm-6 col-md-3 col-xl-10">
+            small : 576px
+            medium : 768px
+            xtra lg : 1200
+            
+            Untuk lebar layar 576px - 767px akan mengambil 6 bagian
+            Untuk lebar layar 768px - 1199 akan mengambil 3 bagian
+            Untuk lebar layar 1200 - seterusnya akan mengambil 10 bagian
+         </div>
+
+         <div class="col">
+            Lebarnya akan mengambil sisa ruang yang ada
+         </div>
+      -->
+
      <div class="container">
          <!-- Grid container -->
         <div class="row">
@@ -24,19 +53,19 @@
                     <li>6 column pada lebar small</li>
                     <li>8 column pada lebal medium</li>
                     <li>9 column pada lebar large</li>
-                    <li>10 column pada lebar xtra larga</li>
+                    <li>10 column pada lebar xtra large</li>
                 </ul>
             </div>
 
             <!-- Grid Item Second -->
             <div 
-                class="border border-success col-sm-6 col-md-4 col-lg-3 col-xl-2"
+                class="border border-success col "
             >
                 <ul>
                     <li>6 column pada lebar small</li>
                     <li>4 column pada lebal medium</li>
                     <li>3 column pada lebar large</li>
-                    <li>2 column pada lebar xtra larga</li>
+                    <li>2 column pada lebar xtra large</li>
                 </ul>
             </div>
         </div>
