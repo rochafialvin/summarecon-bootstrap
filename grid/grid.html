@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRID</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        .item-h1 {
+            border: 2px solid black;
+            padding: 7px;
+            height: 50px;
+        }
+
+        .row-h1 {
+            background: #928080;
+            height: 250px;
+        }
+    </style>
 </head>
 <body>
-    <h1 class="text-center my-3">GRID BOOTSTRAP</h1>
+    <h1 class="text-center my-3">GRID & FLEXBOX BOOTSTRAP</h1>
     <!-- 
+        - GRID digunakan untuk  mengatur lebar
         - GRID akan membagi lebar browser menjadi 12 bagian
         - Ketika total lebar dari Grid Item melebihi 12, maka akan ada Grid Item yang pindah ke baris selanjutnya
      -->
@@ -44,7 +58,7 @@
 
      <div class="container">
          <!-- Grid container -->
-        <div class="row">
+        <div class="row mb-5">
             <!-- Grid Item First -->
             <div 
                 class="border border-primary col-sm-6 col-md-8 col-lg-9 col-xl-10"
@@ -68,6 +82,65 @@
                     <li>2 column pada lebar xtra large</li>
                 </ul>
             </div>
+        </div>
+
+        <!-- Col Auto -->
+        <div class="row mb-5">
+            <div class="border border-warning col-sm-6 col-md-3">6 small, 3 medium</div>
+            <div class="border border-danger col-sm-4 col-md-3">4 small, 3 medium</div>
+            <div class="border border-success col">Auto, ambil sisa bagians</div>
+        </div>
+
+        <!-- offset -->
+        <div class="row mb-5">
+            <div class="border border-warning col-sm-4 ">4 column</div>
+            <div class="border border-danger col-sm-7 offset-sm-1 ">7 column, 1 offset</div>
+            
+        </div>
+
+        <!-- Order -->
+        <div class="row">
+            <div class="border border-warning col-sm-4 order-sm-3 ">FIRST</div>
+            <div class="border border-danger col-sm-4 order-sm-1">SECOND</div>
+            <div class="border border-danger col-sm-4 order-sm-2">THIRD</div>
+            
+        </div>
+
+        <!--
+            FLEXBOX digunakan untuk mengatur posisi
+        -->
+
+        <!-- Flex Container -->
+        <!-- 
+            justify-content-start
+            justify-content-center
+            justify-content-end
+            justify-content-around
+            justify-content-between
+
+            Untuk menggunakan align-content, tambahkan class flex-wraps
+            align-content-start
+            align-content-center
+            align-content-end
+            align-content-around
+            align-content-between
+
+         -->
+
+         <!-- flex-row : tersusun secara horizontal (default) -->
+        <div class="d-flex flex-row justify-content-around align-content-center flex-wrap my-5 row-h1 ">
+            <!-- Flex Item -->
+            <div class="item-h1">Flex Item 1</div>
+            <div class="item-h1">Flex Item 2</div>
+            <div class="item-h1">Flex Item 3</div>
+        </div>
+
+        <!-- flex-column : tersusun secara verticial -->
+        <div class="d-flex flex-column justify-content-around align-content-center flex-wrap my-5 row-h1 ">
+            <!-- Flex Item -->
+            <div class="item-h1">Flex Item 1</div>
+            <div class="item-h1">Flex Item 2</div>
+            <div class="item-h1">Flex Item 3</div>
         </div>
      </div>
 
